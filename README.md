@@ -1,4 +1,4 @@
-# Exam-management-system
+# 考试后台管理系统
 #### 介绍
 
 基于SpringBoot + SSM + SpringSecurity + BootStrap + MySQL等技术开发的B/S 架构项目。
