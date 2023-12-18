@@ -7,16 +7,16 @@
 
 - 后台注册登录功能
 
-  ![image1](D:\workspace\Exam-management-system\image\image1.png)
+  ![image1](https://github.com/R99E/Exam-management-system/blob/main/image/image1.png)
 
 - 后台管理员维护功能
 
-  ![image2](D:\workspace\Exam-management-system\image\image2.png)
+  ![image2](https://github.com/R99E/Exam-management-system/blob/main/image/image2.png)
 
 - 题库管理
 
-  ![image3](D:\workspace\Exam-management-system\image\image3.png)
+  ![image3](https://github.com/R99E/Exam-management-system/blob/main/image/image3.png)
 
 - 题库组卷
 
-  ![image4](D:\workspace\Exam-management-system\image\image4.png)
+  ![image4](https://github.com/R99E/Exam-management-system/blob/main/image/image4.png)
