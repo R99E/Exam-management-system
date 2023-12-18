@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.mz.auth.mapper.VStuMapper">
+
+    <sql id="whereSql">
+        <where>
+            <if test="nickName!=null and nickName !=''"><!--学生昵称-->
+                and nickName like concat('%',#{nickName},'%')
+            </if>
+            <if test="name!=null and name !=''"><!--试卷名称-->
+                and name like concat('%',#{name},'%')
+            </if>
+
+        </where>
+    </sql>
+
+    <select id="queryTotal" parameterType="vStuQuery" resultType="java.lang.Long">
+        select count(*) from v_score
+        <include refid="whereSql"/>
+    </select>
+    <!--    分页的数据-->
+    <select id="queryData" parameterType="vStuQuery" resultType="VStuScore">
+        select * from v_score
+        <include refid="whereSql"/>
+        limit #{offset},#{page}
+    </select>
+
+</mapper>

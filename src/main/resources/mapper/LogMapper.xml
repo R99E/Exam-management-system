@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.mz.auth.mapper.LogMapper">
+
+    <sql id="whereSql">
+        <where>
+            <if test="url!=null and url !=''">
+                and url like concat('%',#{url},'%')
+            </if>
+
+
+        </where>
+    </sql>
+
+    <select id="queryTotal" parameterType="logQuery" resultType="java.lang.Long">
+        select count(*) from t_logs
+        <include refid="whereSql"/>
+    </select>
+    <!--    分页的数据-->
+    <select id="queryData" parameterType="logQuery" resultType="Log">
+        select * from t_logs
+        <include refid="whereSql"/>
+        limit #{offset},#{page}
+    </select>
+
+</mapper>
